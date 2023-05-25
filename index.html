@@ -26,7 +26,7 @@
                     <label for="expense-input">Ingresa la cantidad del gasto</label>
                     <input type="text" inputmode="numeric" name="expense-input" id="expense-input">
                 </form>
-                <button class="btn btn-danger">Añadir gasto</button>
+                <button class="btn btn-danger" id="expense-btn">Añadir gasto</button>
             </div>
         </div>
         <div class="right">
@@ -57,12 +57,8 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td id="expense-name">$ 0</td>
-                            <td id="expense-value">$ 0</td>
-                            <td id="expense-del">🗑️</td>
-                        </tr>
+                    <tbody id="expense-list">
+                        <!-- render expenses -->
                     </tbody>
                 </table>
             </div>
