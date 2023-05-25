@@ -1,0 +1,42 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    align-self: center;
+    width: 95%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    width: 50%;
+    padding: 1rem;
+}
+
+.right {
+    width: 50%;
+    padding: 1rem;
+}
+
+.input-form {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
