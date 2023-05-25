@@ -61,15 +61,23 @@ const deleteExpense = (e) => {
 
 budgetBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    budgetTotal = budgetInput.value;
-    budgetValue.textContent = `$ ${budgetTotal}`;
-    budgetBalance.textContent = `$ ${budgetTotal - expensesTotal}`;
+    if (budgetInput.value > 0) {
+        budgetTotal = budgetInput.value;
+        budgetValue.textContent = `$ ${budgetTotal}`;
+        budgetBalance.textContent = `$ ${budgetTotal - expensesTotal}`;
+    } else {
+        alert('El presupuesto debe ser un número mayor a 0');
+        }
 });
 
 
 expenseBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    addExpense();
+    if (expenseInput.value > 0) {
+        addExpense();
+    } else {
+        alert('El gasto debe ser un número mayor a 0');
+        }
     }
 );
 

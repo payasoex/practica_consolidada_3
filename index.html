@@ -15,7 +15,7 @@
             <div class="input-form">
                 <form>
                     <label for="budget-input">Ingresa tu presupuesto</label>
-                    <input type="text" inputmode="numeric" name="budget-input" id="budget-input" value="1000">
+                    <input type="text" inputmode="numeric" name="budget-input" id="budget-input" value="1000" pattern="^?\d+$" title="Solo se permiten números positivos">
                 </form>
                 <button class="btn btn-success" id="budget-btn">Calcular</button>
             </div>
@@ -24,7 +24,7 @@
                     <label for="expense">Ingresa el nombre del gasto</label>
                     <input type="text" name="expense" id="expense">
                     <label for="expense-input">Ingresa la cantidad del gasto</label>
-                    <input type="text" inputmode="numeric" name="expense-input" id="expense-input">
+                    <input type="text" inputmode="numeric" name="expense-input" id="expense-input" pattern="^?\d+$" title="Solo se permiten números positivos">
                 </form>
                 <button class="btn btn-danger" id="expense-btn">Añadir gasto</button>
             </div>
