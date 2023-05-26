@@ -1,4 +1,4 @@
-// declaracion de variables y constantes
+// elementos del DOM
 
 const budgetInput = document.querySelector('#budget-input');
 const budgetValue = document.querySelector('#budget-total');
@@ -13,6 +13,9 @@ const expenseBtn = document.querySelector('#expense-btn');
 const expenseList = document.querySelector('#expense-list');
 const deleteBtn = document.querySelector('#delete-btn');
 const expenseValue = document.querySelector('#expense-value');
+
+
+// variables
 
 let budgetTotal = 0;
 let expensesTotal = 0;
