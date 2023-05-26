@@ -76,13 +76,12 @@ budgetBtn.addEventListener('click', (e) => {
 
 expenseBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    if (expenseInput.value > 0) {
+    if (expenseName.value !== '' && expenseInput.value > 0) {
         addExpense();
     } else {
-        alert('El gasto debe ser un número mayor a 0');
-        }
+        alert('Debes ingresar el nombre del gasto y el gasto debe ser un número mayor a 0');
     }
-);
+});
 
 expenseList.addEventListener('click', (e) => {
     deleteExpense(e);
