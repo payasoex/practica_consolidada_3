@@ -9,63 +9,64 @@
     <title>Practica Consolidada 3</title>
 </head>
 <body>
-    <h2>Presupuesto App</h2>
-    <div class="container">
-        <div class="left">
-            <div class="input-form">
-                <form>
-                    <label for="budget-input">Ingresa tu presupuesto</label>
-                    <input type="text" inputmode="numeric" name="budget-input" id="budget-input" value="1000" pattern="^?\d+$" title="Solo se permiten números positivos">
-                </form>
-                <button class="btn btn-success" id="budget-btn">Calcular</button>
+    <div class="container d-flex flex-column p-5">
+        <h2>Presupuesto App</h2>
+        <div class="container d-flex p-0">
+            <div class="left d-flex flex-column ps-0 ms-0">
+                <div class="input-form">
+                    <form>
+                        <label for="budget-input">Ingresa tu presupuesto</label>
+                        <input type="text" inputmode="numeric" name="budget-input" id="budget-input" value="1000" pattern="^?\d+$" title="Solo se permiten números positivos" required>
+                        <button class="btn btn-success" id="budget-btn">Calcular</button>
+                    </form>
+                </div>
+                <div class="input-form">
+                    <form>
+                        <label for="expense">Ingresa el nombre del gasto</label>
+                        <input type="text" name="expense" id="expense" required>
+                        <label for="expense-input">Ingresa la cantidad del gasto</label>
+                        <input type="text" inputmode="numeric" name="expense-input" id="expense-input" pattern="^?\d+$" title="Solo se permiten números positivos" required>
+                        <button type="button" class="btn btn-danger" id="expense-btn">Añadir gasto</button>
+                    </form>
+                </div>
             </div>
-            <div class="input-form">
-                <form>
-                    <label for="expense">Ingresa el nombre del gasto</label>
-                    <input type="text" name="expense" id="expense">
-                    <label for="expense-input">Ingresa la cantidad del gasto</label>
-                    <input type="text" inputmode="numeric" name="expense-input" id="expense-input" pattern="^?\d+$" title="Solo se permiten números positivos">
-                </form>
-                <button class="btn btn-danger" id="expense-btn">Añadir gasto</button>
+            <div class="right d-flex flex-column">
+                <div class="budget mb-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Presupuesto</th>
+                                <th>Gastos</th>
+                                <th>Saldo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="budget-total">$ 0</td>
+                                <td id="expenses-total">$ 0</td>
+                                <td id="balance">$ 0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="gastos">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Gasto</th>
+                                <th>Valor</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="expense-list">
+                            <!-- render expenses -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
+            
         </div>
-        <div class="right">
-            <div class="budget">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Presupuesto</th>
-                            <th>Gastos</th>
-                            <th>Saldo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="budget-total">$ 0</td>
-                            <td id="expenses-total">$ 0</td>
-                            <td id="balance">$ 0</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="gastos">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Gasto</th>
-                            <th>Valor</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody id="expense-list">
-                        <!-- render expenses -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        
     </div>
-      
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
