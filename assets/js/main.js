@@ -38,10 +38,13 @@ const renderExpenses = (expensesArr) => {
         <tr>
         <td>${expense.name}</td>
         <td>$ <span id="expense-amount">${expense.amount}</span></td>
-        <td><button id="delete-btn" class="btn btn-danger">X</button></td>
+        <td>
+            <i id="delete-btn" class="bi bi-trash"></i>
+        </td>
         </tr>
         `;
     });
+    // <td><button id="delete-btn" class="btn btn-danger">X</button></td>
 };
 
 const addExpense = () => {
